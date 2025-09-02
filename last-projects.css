@@ -1,0 +1,158 @@
+/** Last Projects Section **/
+
+/** Skills Section **/
+/** El Skills Section que me acabas de pasar **/
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill {
+    background: var(--background-primary);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.skill img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 1rem;
+}
+
+.skill h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.skill p {
+    font-size: 0.95rem;
+    color: var(--color-muted);
+    line-height: 1.5;
+}
+
+/** Last Projects Section **/
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--background-primary);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.project-card > div:first-child {
+    padding: 1.5rem;
+}
+
+.project-card h4 {
+    margin: 0.25rem 0 0.75rem;
+    font-size: 1.2rem;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: var(--color-muted);
+    line-height: 1.5;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.card-button-secondary {
+    background: var(--background-secondary);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--border-radius);
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.card-button-secondary:hover {
+    background: var(--accent-green);
+    color: #fff;
+}
+
+.project-links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.project-links a {
+    padding: 0.5rem 1rem;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.project-links a:first-child {
+    background: var(--color-link);
+    color: #fff;
+}
+
+.project-links a:first-child:hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+}
+
+.project-links a:last-child {
+    background: #111827;
+    color: #fff;
+}
+
+.project-links a:last-child:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+/* Imagen del proyecto */
+.img-div {
+    width: 100%;
+    overflow: hidden;
+}
+
+.img-div img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .img-div img {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .project-card {
+        flex-direction: column;
+    }
+}

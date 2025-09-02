@@ -1,0 +1,497 @@
+/* Header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: var(--background-primary);
+    box-shadow: var(--box-shadow);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: "Grenze", serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: var(--color-link);
+    background: linear-gradient(90deg, var(--color-link), var(--accent-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.social-nav a {
+    margin-left: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--background-secondary);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 rgba(0,0,0,0); /* inicio sin sombra */
+}
+
+.social-nav i {
+    font-size: 18px;
+    color: var(--color-text);
+    transition: color 0.3s ease;
+}
+
+/* Hover GitHub */
+.social-nav a.github:hover {
+    background: #24292f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* sombra suave */
+}
+.social-nav a.github:hover i {
+    color: #fff;
+}
+
+/* Hover LinkedIn */
+.social-nav a.linkedin:hover {
+    background: #0a66c2;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(10,102,194,0.35); /* sombra con tinte azul */
+}
+.social-nav a.linkedin:hover i {
+    color: #fff;
+}
+
+/** Intro Section **/
+.intro {
+    text-align: left; /* alineado en desktop */
+    padding: 6rem 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.intro-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.highlight {
+    background: linear-gradient(90deg, var(--color-link), var(--accent-green));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.intro-role {
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: var(--color-muted);
+    margin-bottom: 2rem;
+}
+
+.intro-description {
+    max-width: 750px;
+    font-size: 1.15rem;
+    font-weight: 400;
+    line-height: 1.75; /* aireado para legibilidad */
+    color: var(--color-text);
+    margin-bottom: 3rem;
+}
+
+/* Call to Action Links */
+.links-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start; /* alineado a la izquierda */
+    gap: 1rem;
+}
+
+/* Botones base */
+.btn {
+    padding: 0.8rem 1.6rem;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+.btn i {
+    font-size: 1.1rem;
+}
+
+/* Variantes */
+.btn-primary {
+    background: #1f2937; /* gris carbón */
+    color: #fff;
+}
+.btn-primary:hover {
+    background: #111827;
+    transform: translateY(-3px);
+}
+
+.btn-github {
+    background: #000;
+    color: #fff;
+}
+.btn-github:hover {
+    background: #333;
+    transform: translateY(-3px);
+}
+
+.btn-linkedin {
+    background: #0a66c2;
+    color: #fff;
+}
+.btn-linkedin:hover {
+    background: #084182;
+    transform: translateY(-3px);
+}
+
+/* Responsive: móvil centrado */
+@media (max-width: 768px) {
+    .intro {
+        text-align: center;
+        padding: 4rem 1.5rem;
+    }
+    .links-container {
+        justify-content: center;
+    }
+}
+
+/** Skills Section **/
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en desktop */
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.skill {
+    background: var(--background-primary);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.skill:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.skill img {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem;
+    transition: transform 0.3s ease;
+}
+
+.skill:hover img {
+    transform: scale(1.1) rotate(3deg);
+}
+
+.skill h3 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+}
+
+.skill p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: var(--color-muted);
+    line-height: 1.6;
+}
+
+/* Chips de tecnologías */
+.skill p span {
+    display: inline-block;
+    padding: 0.4rem 0.8rem;
+    background: var(--background-secondary);
+    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.skill p span:hover {
+    background: rgba(40,130,200,0.15);
+    color: var(--color-text);
+}
+
+/* Animaciones infinitas */
+@keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-5px); } }
+
+.spin-react { animation: spin 10s linear infinite; }
+.float-docker { animation: float 3s ease-in-out infinite; }
+.spin-k8s { animation: spin 12s linear infinite; }
+
+/* Título con subrayado animado */
+.section-title {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-blue), var(--accent-green));
+    transition: width 1.5s ease;
+}
+
+.section-title.animate::after {
+    width: 100%;
+}
+
+/* DevOps / Databases múltiples íconos */
+.icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; /* Ajusta separación entre íconos */
+    margin-bottom: 1rem;
+}
+
+.icons-container img {
+    margin: 0;
+    display: inline-flex;
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: 1fr; /* 1 columna en móviles */
+        gap: 1.5rem;
+    }
+
+    .skill img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .skill h3 {
+        font-size: 1.2rem;
+    }
+
+    .skill p {
+        font-size: 0.95rem;
+    }
+
+    .section-title {
+        font-size: 1.7rem;
+    }
+}
+
+/** Last Projects section **/
+#projects {
+    padding: 4rem 1rem;
+}
+
+#projects .section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    color: var(--color-text);
+}
+
+/* Grid en columna */
+.cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+/* Project Card */
+.project-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 2rem;
+    border: 1px solid var(--color-border);
+    border-radius: 1rem;
+    padding: 2rem;
+    background: var(--color-bg);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.6s ease;
+    opacity: 0; /* Fade-in inicial */
+    transform: translateY(30px);
+}
+
+.project-card.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover elegante */
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Fecha */
+.project-date {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+    margin-bottom: 0.6rem;
+}
+
+/* Título */
+.project-title {
+    font-size: 1.5rem;
+    font-weight: 650;
+    margin-bottom: 1.2rem;
+    color: var(--color-text);
+}
+
+/* Descripción */
+.project-desc {
+    font-size: 1rem;
+    line-height: 1.65;
+    color: var(--color-text-secondary);
+    margin: 1.4rem 0;
+}
+
+/* ===== Chips de tecnologías (igual que en Skills) ===== */
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-list .card-button-secondary {
+    display: inline-block;
+    padding: 0.7rem 0.6rem;
+    background: var(--background-secondary);
+    border-radius: var(--border-radius);
+    font-size: 0.95rem;
+    color: var(--color-muted);
+    line-height: 1;
+    border: 0;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    cursor: default;
+}
+
+.tech-list .card-button-secondary:hover {
+    background: rgba(40,130,200,0.15);
+    color: var(--color-text);
+    transform: translateY(-2px);
+}
+
+/* Links */
+.project-links {
+    display: flex;
+    gap: 1.1rem;
+    margin-top: 1.6rem;
+}
+
+.project-links a {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-link);
+    text-decoration: none;
+    border: 1px solid var(--color-link);
+    border-radius: 8px;
+    padding: 0.5rem 1.1rem;
+    transition: all 0.25s ease;
+}
+
+.project-links a:hover {
+    background: var(--color-link);
+    color: #fff;
+}
+
+/* Imagen */
+.img-div {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    text-align: right;
+}
+
+.big-img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+/* Hover zoom */
+.project-card:hover .big-img {
+    transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .project-card {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .img-div {
+        text-align: center;
+    }
+
+    .big-img {
+        max-width: 100%;
+    }
+}
+
+/** Footer **/
+footer {
+    padding: 3rem 1rem; /* más espacio vertical */
+    text-align: center;
+    font-size: 0.95rem;
+    color: var(--color-muted);
+    margin-top: 4rem;
+    margin-bottom: 2rem; /* espacio debajo del footer */
+    background: var(--color-bg-secondary); /* contraste sutil */
+    border-radius: 0.5rem; /* opcional */
+}
+
+footer p {
+    margin: 0;
+    line-height: 1.6;
+}
+
+footer a {
+    color: var(--color-link);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.25s ease, text-decoration 0.25s ease;
+}
+
+footer a:hover {
+    color: var(--color-link-hover, #0077ff);
+    text-decoration: underline;
+}
+
+.pb-2 {
+    padding-bottom: 1.7rem;
+}

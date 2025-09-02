@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600&family=Grenze:wght@500;700&display=swap');
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Eczar", Georgia, serif; /* elegante y profesional */
+    color: var(--color-text);
+    background: linear-gradient(
+            180deg,
+            var(--background-primary) 0%,
+            var(--background-secondary) 100%
+    ); /* blanco arriba a gris muy suave abajo */
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* Variables de color */
+:root {
+    /* ===== Text ===== */
+    --color-text: #030615;
+    --color-text-secondary: #334155; /* gris oscuro para descripciones */
+    --color-muted: #64748b; /* gris medio, usado en fechas */
+
+    /* ===== Links ===== */
+    --color-link: #2563eb;
+    --color-link-hover: #7190ff;
+    --color-link-transparent: rgba(37, 99, 235, 0.1);
+
+    /* ===== Backgrounds ===== */
+    --color-bg: #ffffff;            /* fondo principal de tarjetas */
+    --color-bg-secondary: #f8fafc;  /* gris muy claro para chips/etiquetas */
+    --background-primary: #ffffff;
+    --background-secondary: #f8fafc;
+
+    /* ===== Borders & Shadows ===== */
+    --color-border: #e2e8f0; /* gris claro */
+    --border-radius: 0.5rem;
+    --box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+
+    /* ===== Accents ===== */
+    --accent-blue: #61dafb;  /* React */
+    --accent-green: #4caf50; /* Spring */
+    --accent-highlight: #fef9c3;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Grenze", Georgia, serif; /* Titulares más marcados */
+    font-weight: bold;
+    color: var(--color-text);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+/* Tamaños adaptativos */
+h1 { font-size: clamp(2rem, 5vw, 2.5rem); }
+h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
+h3 { font-size: clamp(1.25rem, 3vw, 1.5rem); }
+h4 { font-size: clamp(1.1rem, 2.5vw, 1.25rem); }
+
+/* Párrafos */
+p {
+    margin-bottom: 1rem;
+    color: var(--color-muted);
+}
+
+/* Links */
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-link-hover);
+}
+
+a:focus {
+    outline: 2px solid var(--accent-blue);
+    outline-offset: 2px;
+}
+
+/* Botones base */
+button,
+.btn {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    border-radius: var(--border-radius);
+    font-family: "Grenze", Georgia, serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+/* Botón primario */
+.btn-primary {
+    background: var(--color-link);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: var(--color-link-hover);
+}
+
+/* Botón secundario */
+.btn-secondary {
+    background: var(--background-secondary);
+    color: var(--color-link);
+    border: 1px solid var(--color-link);
+}
+
+.btn-secondary:hover {
+    background: var(--color-link-transparent);
+}
+
+button:focus-visible {
+    outline: 2px solid var(--accent-green);
+    outline-offset: 2px;
+}
+
+/* Secciones */
+section {
+    padding: 5rem 0;
+}
+
+/* Utilidades */
+.text-center { text-align: center; }
+.hidden { display: none; }
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.p-y-rm {
+    padding-top: 0;
+    padding-bottom: 0;
+}
